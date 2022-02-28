@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.s16417.extract.ExtractClassData
+Premain-Class: ObjectSizeFetcher
+

@@ -1,0 +1,624 @@
+[
+    {
+        "Package Name": "com.s16417.extract",
+        "Classes": [
+            {
+                "Fields": [
+                    {
+                        "Descriptor": "Lorg/json/simple/JSONArray;",
+                        "Static": "Yes",
+                        "Type/Generic": "org.json.simple.JSONArray",
+                        "Notes": "|Collection",
+                        "Name": "packageList"
+                    },
+                    {
+                        "Descriptor": "Lorg/json/simple/JSONArray;",
+                        "Static": "Yes",
+                        "Type/Generic": "org.json.simple.JSONArray",
+                        "Notes": "|Collection",
+                        "Name": "classList"
+                    },
+                    {
+                        "Descriptor": "Lorg/json/simple/JSONObject;",
+                        "Static": "Yes",
+                        "Type/Generic": "org.json.simple.JSONObject",
+                        "Notes": "|Map",
+                        "Name": "packageDetails"
+                    },
+                    {
+                        "Descriptor": "Ljava/util/Map;",
+                        "Static": "Yes",
+                        "Type/Generic": "java.util.Map",
+                        "Notes": "|Map",
+                        "Name": "map"
+                    },
+                    {
+                        "Descriptor": "Ljava/lang/instrument/Instrumentation;",
+                        "Static": "Yes",
+                        "Type/Generic": "java.lang.instrument.Instrumentation",
+                        "Notes": "",
+                        "Name": "instrumentation"
+                    }
+                ],
+                "Class Name": "com.s16417.extract.ExtractClassData",
+                "Methods": [
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "args"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/instrument/Instrumentation;",
+                                "Name": "inst"
+                            }
+                        ],
+                        "Return Type": "void",
+                        "Signature": "(Ljava/lang/String;Ljava/lang/instrument/Instrumentation;)V",
+                        "Method Name": "premain"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/Object;",
+                                "Name": "o"
+                            }
+                        ],
+                        "Return Type": "long",
+                        "Signature": "(Ljava/lang/Object;)J",
+                        "Method Name": "getObjectSize"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "I",
+                                "Name": "table"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "i"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "start"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "intList"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "intList2"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "field"
+                            },
+                            {
+                                "Descriptor": "I",
+                                "Name": "end"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "[Ljava/lang/String;",
+                                "Name": "args"
+                            }
+                        ],
+                        "Return Type": "void",
+                        "Signature": "([Ljava/lang/String;)V",
+                        "Method Name": "main"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "classes"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "classFiles"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "ctClasses"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "fileName"
+                            }
+                        ],
+                        "Return Type": "void",
+                        "Signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+                        "Method Name": "extract"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            }
+                        ],
+                        "Return Type": "java.util.Set",
+                        "Signature": "(Ljava/lang/String;)Ljava/util/Set;",
+                        "Method Name": "findAllClassesUsingGoogleGuice"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljava/io/InputStream;",
+                                "Name": "stream"
+                            },
+                            {
+                                "Descriptor": "Ljava/io/InputStream;",
+                                "Name": "reader"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            }
+                        ],
+                        "Return Type": "java.util.Set",
+                        "Signature": "(Ljava/lang/String;)Ljava/util/Set;",
+                        "Method Name": "findAllClassesUsingClassLoader"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "className"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            }
+                        ],
+                        "Return Type": "java.lang.Class",
+                        "Signature": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Class;",
+                        "Method Name": "getClass"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "className"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "ctClass"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "cf"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "pool"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "classFiles"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "it"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/util/Set;",
+                                "Name": "classes"
+                            }
+                        ],
+                        "Return Type": "java.util.Set",
+                        "Signature": "(Ljava/util/Set;)Ljava/util/Set;",
+                        "Method Name": "insertClassesToClassFiles"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "className"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "ctClass"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "pool"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "classFiles"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "it"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/util/Set;",
+                                "Name": "classes"
+                            }
+                        ],
+                        "Return Type": "java.util.Set",
+                        "Signature": "(Ljava/util/Set;)Ljava/util/Set;",
+                        "Method Name": "getCtClasses"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "interfaces"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "ctClasses"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "ctClass"
+                            }
+                        ],
+                        "Return Type": "java.util.Set",
+                        "Signature": "(Ljavassist/CtClass;)Ljava/util/Set;",
+                        "Method Name": "getAllSuperclasses"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "interfaceCtClass"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "thisCtClass"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "targetClassName"
+                            }
+                        ],
+                        "Return Type": "boolean",
+                        "Signature": "(Ljavassist/CtClass;Ljava/lang/String;)Z",
+                        "Method Name": "isAssignable"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljavassist/CtField;",
+                                "Name": "thisCtField"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "targetClassName"
+                            }
+                        ],
+                        "Return Type": "boolean",
+                        "Signature": "(Ljavassist/CtField;Ljava/lang/String;)Z",
+                        "Method Name": "isAssignable"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljavassist/CtClass;",
+                                "Name": "ctClass"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/bytecode/SignatureAttribute$Type;",
+                                "Name": "genericSignature"
+                            }
+                        ],
+                        "Return Type": "java.lang.String",
+                        "Signature": "(Ljavassist/CtClass;Ljavassist/bytecode/SignatureAttribute$Type;)Ljava/lang/String;",
+                        "Method Name": "inferGenericTypeName"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljavassist/NotFoundException;",
+                                "Name": "ignore"
+                            },
+                            {
+                                "Descriptor": "Ljavassist/NotFoundException;",
+                                "Name": "e"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljavassist/CtField;",
+                                "Name": "field"
+                            }
+                        ],
+                        "Return Type": "java.lang.String",
+                        "Signature": "(Ljavassist/CtField;)Ljava/lang/String;",
+                        "Method Name": "inferFieldTypeName"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "fieldInfo"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "a"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "map2"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "fieldInfo"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "sig"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "obj"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "fieldDetails"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "type"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "allSupper"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "ctField"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "localMethodParamDetails"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "localMethodVarDetails"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "start"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "len"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "i"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "minfo"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "ca"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "table"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "pc"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "n"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "e"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "methodDetails"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "localMethodParamList"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "localMethodVarList"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "m"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "classDetails"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "fieldList"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "methodList"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "ctClass"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/ArrayList;",
+                                "Name": "ctIte"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/util/Set;",
+                                "Name": "classFiles"
+                            },
+                            {
+                                "Descriptor": "Ljava/util/Set;",
+                                "Name": "ctClasses"
+                            }
+                        ],
+                        "Return Type": "void",
+                        "Signature": "(Ljava/util/Set;Ljava/util/Set;)V",
+                        "Method Name": "getClassData"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljava/lang/reflect/Field;",
+                                "Name": "dataField"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/util/Map;",
+                                "Name": "l"
+                            }
+                        ],
+                        "Return Type": "int",
+                        "Signature": "(Ljava/util/Map;)I",
+                        "Method Name": "getCapacity"
+                    },
+                    {
+                        "Variables": [
+                            {
+                                "Descriptor": "Ljava/io/IOException;",
+                                "Name": "file"
+                            },
+                            {
+                                "Descriptor": "Ljava/io/IOException;",
+                                "Name": "e"
+                            }
+                        ],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "fileName"
+                            }
+                        ],
+                        "Return Type": "void",
+                        "Signature": "(Ljava/lang/String;)V",
+                        "Method Name": "writeJson"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            },
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "line"
+                            }
+                        ],
+                        "Return Type": "java.lang.Class",
+                        "Signature": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Class;",
+                        "Method Name": "lambda$findAllClassesUsingClassLoader$4"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "line"
+                            }
+                        ],
+                        "Return Type": "boolean",
+                        "Signature": "(Ljava/lang/String;)Z",
+                        "Method Name": "lambda$findAllClassesUsingClassLoader$3"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Lcom/google/common/reflect/ClassPath$ClassInfo;",
+                                "Name": "clazz"
+                            }
+                        ],
+                        "Return Type": "java.lang.Class",
+                        "Signature": "(Lcom/google/common/reflect/ClassPath$ClassInfo;)Ljava/lang/Class;",
+                        "Method Name": "lambda$findAllClassesUsingGoogleGuice$2"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/String;",
+                                "Name": "packageName"
+                            },
+                            {
+                                "Descriptor": "Lcom/google/common/reflect/ClassPath$ClassInfo;",
+                                "Name": "clazz"
+                            }
+                        ],
+                        "Return Type": "boolean",
+                        "Signature": "(Ljava/lang/String;Lcom/google/common/reflect/ClassPath$ClassInfo;)Z",
+                        "Method Name": "lambda$findAllClassesUsingGoogleGuice$1"
+                    },
+                    {
+                        "Variables": [],
+                        "Parameters": [
+                            {
+                                "Descriptor": "Ljava/lang/reflect/Field;",
+                                "Name": "item"
+                            }
+                        ],
+                        "Return Type": "java.lang.String",
+                        "Signature": "(Ljava/lang/reflect/Field;)Ljava/lang/String;",
+                        "Method Name": "lambda$main$0"
+                    }
+                ]
+            }
+        ]
+    }
+]

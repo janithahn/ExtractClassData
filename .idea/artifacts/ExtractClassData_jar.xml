@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ExtractClassData:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ExtractClassData_jar</output-path>
+    <root id="archive" name="ExtractClassData.jar">
+      <element id="module-output" name="ExtractClassData" />
+      <element id="library" level="project" name="guava-31.0.1-jre" />
+      <element id="library" level="project" name="javassist" />
+      <element id="library" level="project" name="json-simple-1.1" />
+    </root>
+  </artifact>
+</component>
