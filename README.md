@@ -1,2 +1,6 @@
 # ExtractClassData
- Read hte bytecode of Java classes and retrieve data by using 'javassist' and 'google guava'.
+ ### Read the bytecode of Java classes and retrieve data.
+ 
+ ## Used Libraries
+ * javassist
+ * google guava
