@@ -33,7 +33,7 @@ public class ExtractClassData {
         return instrumentation.getObjectSize(o);
     }
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
         long start = System.currentTimeMillis();
         extract("com.s16417.extract", "sample");
         //System.out.println("Map size(byte) -> " + RamUsageEstimator.sizeOf(map));
@@ -61,16 +61,16 @@ public class ExtractClassData {
         //System.out.println("intList size(byte) -> " + RamUsageEstimator.sizeOf(intList2));
         //System.out.println("map size(byte) -> " + RamUsageEstimator.sizeOf(map));
 
-        /*for(int i = 20 ; i < 40 ; i++){
+        for(int i = 20 ; i < 40 ; i++){
             intList.add(i);
             map.put(i, i);
         }
         System.out.println("intList size(byte) -> " + RamUsageEstimator.sizeOf(intList));
-        System.out.println("map size(byte) -> " + RamUsageEstimator.sizeOf(map));*/
+        System.out.println("map size(byte) -> " + RamUsageEstimator.sizeOf(map));
 
         long end = System.currentTimeMillis();
         System.out.println("Runtime Millis: " + (end-start));
-    }
+    }*/
 
     public static void extract(String packageName, String fileName) throws Exception {
 
